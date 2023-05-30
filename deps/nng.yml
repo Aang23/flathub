@@ -1,0 +1,15 @@
+---
+name: nng
+buildsystem: cmake
+config-opts:
+- "-DCMAKE_BUILD_TYPE=Release"
+- "-DBUILD_SHARED_LIBS=ON .."
+- "-DCMAKE_INSTALL_LIBDIR=lib"
+disabled: false
+make-args:
+- "-j8"
+sources:
+- type: git
+  url: https://github.com/nanomsg/nng.git
+  branch: master
+builddir: true

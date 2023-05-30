@@ -1,0 +1,16 @@
+---
+name: boost
+buildsystem: simple
+sources:
+  # Boost 1.73 is supported since Build 21~r24600 (75b494626310dd5ea04d2b2f0d63b1581a97da3c)
+  # https://github.com/widelands/widelands/issues/3905
+  # https://github.com/widelands/widelands/pull/3907
+  - type: archive
+    url: https://boostorg.jfrog.io/artifactory/main/release/1.78.0/source/boost_1_78_0.tar.bz2
+    sha256: 8681f175d4bdb26c52222665793eef08490d7758529330f98d3b29dd0735bccc
+build-commands:
+  - ./bootstrap.sh --prefix="${FLATPAK_DEST}" --with-libraries=filesystem,system,test,program_options,date_time,regex,thread,chrono,fiber,atomic,serialization,wave,random;
+  - ./b2 -j"${FLATPAK_BUILDER_N_JOBS}" install;
+post-install:
+  - install -p -D -m 0644 "LICENSE_1_0.txt" -t "${FLATPAK_DEST}/share/licenses/boost/";
+

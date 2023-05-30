@@ -1,0 +1,9 @@
+---
+name: bladerf
+buildsystem: cmake
+config-opts:
+- "-DINSTALL_UDEV_RULES=OFF"
+sources:
+- type: git
+  url: https://github.com/Nuand/bladeRF.git
+  branch: master

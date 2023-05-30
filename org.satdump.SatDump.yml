@@ -1,0 +1,48 @@
+app-id: org.satdump.SatDump
+runtime: org.freedesktop.Platform
+runtime-version: '22.08'
+sdk: org.freedesktop.Sdk
+rename-desktop-file: satdump.desktop
+#rename-icon: satdump
+command: satdump-ui
+finish-args:
+  - --device=all
+  - --device=dri
+  - --share=network
+  - --share=ipc
+  - --filesystem=home
+  - --persist=.config/satdump
+  - --share=ipc
+  - --share=network
+  - --socket=pulseaudio
+  - --socket=fallback-x11
+#  - --socket=wayland
+  - --socket=x11
+cleanup:
+  - "/lib/cmake/"
+modules:
+  - deps/libusb.yml
+  - deps/volk.yml
+  - deps/nng.yml
+  - deps/zlib.yml
+  - deps/png.yml
+  - deps/glew.json
+  - deps/glfw.yml
+  - deps/glu.json
+  - deps/fftw.yml
+  - deps/portaudio.yml
+# devs
+  - devs/airspy.yml
+  - devs/airspyhf.yml
+  - devs/bladerf.yml
+  - devs/libxml2.yml
+  - devs/libaio.yml
+  - devs/libiio.yml
+  - devs/libad9361.yml
+  - devs/rtlsdr.yml
+  - devs/hackrf.yml
+  - devs/boost.yml
+  - devs/uhd.yml
+  - devs/limesdr.yml
+# s
+  - satdump.yml

@@ -1,0 +1,7 @@
+---
+name: limesdr
+buildsystem: cmake
+sources:
+- type: git
+  url: https://github.com/myriadrf/LimeSuite
+  branch: master

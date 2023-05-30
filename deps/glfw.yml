@@ -1,0 +1,14 @@
+---
+name: glfw
+buildsystem: cmake
+config-opts:
+- "-DCMAKE_BUILD_TYPE=Release"
+- "-DCMAKE_INSTALL_LIBDIR=lib"
+disabled: false
+make-args:
+- "-j8"
+sources:
+- type: git
+  url: https://github.com/glfw/glfw
+  branch: master
+builddir: true

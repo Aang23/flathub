@@ -1,0 +1,7 @@
+---
+name: rtlsdr
+buildsystem: cmake
+sources:
+- type: git
+  url: https://github.com/librtlsdr/librtlsdr.git
+  branch: master

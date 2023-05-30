@@ -1,0 +1,7 @@
+---
+name: ad9361
+buildsystem: cmake
+sources:
+- type: git
+  url: https://github.com/analogdevicesinc/libad9361-iio.git
+  branch: master

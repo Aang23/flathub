@@ -1,0 +1,7 @@
+---
+name: airspyhf
+buildsystem: cmake
+sources:
+- type: git
+  url: https://github.com/airspy/airspyhf.git
+  branch: master

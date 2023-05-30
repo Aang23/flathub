@@ -1,0 +1,14 @@
+---
+name: zlib
+buildsystem: cmake
+config-opts:
+- "-DCMAKE_BUILD_TYPE=Release"
+- "-DCMAKE_INSTALL_LIBDIR=lib"
+disabled: false
+make-args:
+- "-j8"
+sources:
+- type: git
+  url: https://github.com/madler/zlib
+  branch: master
+builddir: true

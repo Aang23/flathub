@@ -1,0 +1,7 @@
+---
+name: airspy
+buildsystem: cmake
+sources:
+- type: git
+  url: https://github.com/airspy/airspyone_host
+  branch: master
